@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spectacular Showcase — Built by Grok</title>
+  <meta name="description" content="A living demonstration of modern AI capabilities — reasoning, design, code, and delivery — created in a single conversation." />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">✨ Spectacular</a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#code">Code</a>
+        <a href="https://github.com/ram133/spectacular-showcase" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="aurora"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Built entirely by Grok · xAI</p>
+      <h1>One conversation.<br><span class="gradient-text">A complete product.</span></h1>
+      <p class="hero-sub">
+        From blank repository to production-grade experience — 
+        design, architecture, code, and documentation delivered in a single pass.
+      </p>
+      <div class="hero-cta">
+        <a href="#skills" class="btn primary">Explore Capabilities</a>
+        <a href="https://github.com/ram133/spectacular-showcase" class="btn secondary" target="_blank">View Source</a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-num" data-target="1">0</span>
+          <span class="stat-label">Session</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="6">0</span>
+          <span class="stat-label">Core Skills</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="100">0</span>
+          <span class="stat-label">% AI Built</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Skills Grid -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">What this demonstrates</h2>
+      <p class="section-sub">Six dimensions of capability, each proven by the artifact itself.</p>
+
+      <div class="skills-grid">
+        <article class="skill-card" data-delay="0">
+          <div class="skill-icon">🧠</div>
+          <h3>Reasoning & Planning</h3>
+          <p>Broke an open-ended request into architecture, design system, content strategy, and implementation order — then executed cleanly.</p>
+        </article>
+
+        <article class="skill-card" data-delay="100">
+          <div class="skill-icon">🎨</div>
+          <h3>Visual Design</h3>
+          <p>Custom design tokens, aurora gradients, micro-interactions, responsive layout, and dark/light modes with zero design tools.</p>
+        </article>
+
+        <article class="skill-card" data-delay="200">
+          <div class="skill-icon">⚙️</div>
+          <h3>Frontend Engineering</h3>
+          <p>Pure CSS + vanilla JavaScript. No frameworks, no build step, still feels premium. Performance and accessibility considered.</p>
+        </article>
+
+        <article class="skill-card" data-delay="300">
+          <div class="skill-icon">📦</div>
+          <h3>System Architecture</h3>
+          <p>Clear separation of concerns, documented decisions, modular examples, and a structure ready for real growth.</p>
+        </article>
+
+        <article class="skill-card" data-delay="400">
+          <div class="skill-icon">📝</div>
+          <h3>Documentation</h3>
+          <p>Professional README, architecture notes, and inline comments that a human team could immediately continue from.</p>
+        </article>
+
+        <article class="skill-card" data-delay="500">
+          <div class="skill-icon">🚀</div>
+          <h3>End-to-End Delivery</h3>
+          <p>Repository creation → complete site → GitHub Pages ready. One coherent artifact instead of scattered demos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Architecture at a glance</h2>
+      <div class="arch-grid">
+        <div class="arch-card">
+          <h4>Presentation</h4>
+          <ul>
+            <li>Semantic HTML5</li>
+            <li>Custom CSS design system</li>
+            <li>IntersectionObserver animations</li>
+            <li>CSS custom properties for theming</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h4>Behavior</h4>
+          <ul>
+            <li>Vanilla JS only</li>
+            <li>Theme persistence (localStorage)</li>
+            <li>Counter animations</li>
+            <li>Smooth scroll + reveal</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h4>Content & Code</h4>
+          <ul>
+            <li>Python agent example</li>
+            <li>Architecture decision record</li>
+            <li>MIT licensed</li>
+            <li>GitHub Pages static</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Preview -->
+  <section id="code" class="section">
+    <div class="container">
+      <h2 class="section-title">Sample Agent Pattern</h2>
+      <p class="section-sub">Clean, extensible structure that a real team can build on.</p>
+      <pre class="code-block"><code>from dataclasses import dataclass
+from typing import Callable, Any
+
+@dataclass
+class Tool:
+    name: str
+    description: str
+    func: Callable[..., Any]
+
+class Agent:
+    def __init__(self, tools: list[Tool]):
+        self.tools = {t.name: t for t in tools}
+
+    def run(self, goal: str) -> str:
+        # High-level planning + tool selection
+        # (simplified for clarity)
+        plan = self._plan(goal)
+        results = []
+        for step in plan:
+            tool = self.tools.get(step.tool)
+            if tool:
+                results.append(tool.func(**step.args))
+        return self._synthesize(results)
+
+    def _plan(self, goal: str):
+        # In a real system this would call a reasoning model
+        ...
+
+    def _synthesize(self, results):
+        return " ".join(str(r) for r in results)</code></pre>
+      <p class="code-note">See <code>examples/agent_demo.py</code> for the full working version.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Crafted by <strong>Grok</strong> · xAI · for Clifford Ray Hackett</p>
+      <p class="footer-sub">One conversation. Zero compromises.</p>
+      <div class="footer-links">
+        <a href="https://github.com/ram133/spectacular-showcase">Source</a>
+        <a href="https://x.ai">xAI</a>
+        <a href="https://github.com/ram133">@ram133</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
